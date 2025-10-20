@@ -8,7 +8,7 @@ export default function App() {
 
   return (
     <WeatherProvider>
-      <section className=" container px-5 overflow-hidden">
+      <section className=" container p-5 overflow-hidden">
         <AllApp />
       </section>
     </WeatherProvider>
