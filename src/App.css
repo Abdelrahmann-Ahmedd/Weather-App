@@ -1,0 +1,199 @@
+/* ## Colors */
+:root {
+    /* ### Neutral */
+    --Neutral-900: hsl(243, 96%, 9%);
+    --Neutral-800: hsl(243, 27%, 20%);
+    --Neutral-700: hsl(243, 23%, 24%);
+    --Neutral-600: hsl(243, 23%, 30%);
+    --Neutral-300: hsl(240, 6%, 70%);
+    --Neutral-200: hsl(250, 6%, 84%);
+    --Neutral-0: hsl(0, 0%, 100%);
+    /* ### Orange */
+    --Orange-500: hsl(28, 100%, 52%);
+    /* ### Blue */
+    --Blue-500: hsl(233, 67%, 56%); 
+    --Blue-700: hsl(248, 70%, 36%); 
+}
+
+/* Fonts */
+@font-face {
+    font-family: "BricolageGrotesque";
+    src: url("./assets/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DMSans";
+    src: url("./assets/DMSans-VariableFont_opsz\,wght.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*body*/
+
+body {
+    font-family: "BricolageGrotesque";
+    background-color: var(--Neutral-900);
+    color: var(--Neutral-0);
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+}
+
+body h3 , body h2 {
+    font-family: "DMSans";
+    font-weight: bold;
+}
+
+/*Navbar*/
+nav .btn , .hourly-list .btn {
+    background-color: var(--Neutral-600) !important;
+    border: 0px;
+}
+
+nav .dropdown-menu , .hourly-list .dropdown-menu{
+    background-color: var(--Neutral-700);
+    color: var(--Neutral-300);
+}
+nav .dropdown-menu .dropdown-item ,
+.hourly-list .dropdown-menu .dropdown-item {
+    color: var(--Neutral-0);
+    background-color: var(--Neutral-700);
+    transition: 0.3s;
+}
+nav .dropdown-menu .dropdown-item:hover ,
+.hourly-list .dropdown-menu .dropdown-item:hover {
+    background-color: var(--Neutral-600);
+}
+
+nav .dropdown-menu .list-grp{
+    transition: 0.3s;
+}
+
+nav .dropdown-menu .list-grp:hover {
+    background-color: var(--Neutral-600) !important;    
+}
+
+/* header section */
+.header-section form button {
+    background-color: var(--Blue-500);
+    border: 0px;
+    color: var(--Neutral-0);
+    transition: 0.3s;
+    border: 2px solid var(--Neutral-900) !important;
+    outline: 2px solid var(--Neutral-900) !important;
+}
+
+.header-section form button:hover {
+    outline: 2px solid var(--Blue-500) !important;
+    border-radius: 5px;
+}   
+
+.header-section form input {
+    width: 100%;
+    background-color: var(--Neutral-700);
+    color: var(--Neutral-0);
+    border: 2px solid var(--Neutral-900);
+}
+
+.header-section form input:focus {
+    border: 2px solid var(--Neutral-0);
+}
+
+.header-section form input::placeholder{
+    color: var(--Neutral-0);
+}
+
+/* main section */
+.main-section h4 {
+    color: var(--Neutral-200);
+}
+
+.main-section .deg h3 {
+    font-size: 55px;
+}
+
+/* property section */
+.property-list .property {
+    background-color: var(--Neutral-700);
+    color: var(--Neutral-0);
+}
+
+.property-list .property h4 {
+    color: var(--Neutral-200);
+}
+
+
+
+/* daily list */
+.daily-list .daily {
+    background-color: var(--Neutral-700);
+    color: var(--Neutral-200);
+}
+.daily-list .lis {
+    width: calc(100% / 7);
+}
+
+/* hourly list */
+.hourly-list {
+    background-color: var(--Neutral-800);
+    padding-bottom: 20px !important;
+}
+
+.hourly-list .hourly {
+    background-color: var(--Neutral-600);
+    margin-top: 2px;
+}
+
+
+
+.main-section {
+    background-image: url("./assets/bg-today-large.svg");
+    background-size: cover;
+}
+
+.suggest {
+    background-color: var(--Neutral-600);
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+    nav .nav-img img {
+        width: 90%;
+    }
+
+    .header-section form {
+        width: 100% !important;
+        flex-direction: column;
+    }
+
+    .header-section form button {
+        margin-top: 10px;
+    }
+
+    .main-section {
+        flex-direction: column;
+        padding-top: 25px;
+        text-align: center;
+        justify-content: center !important;
+    }
+
+    .main-section .deg {
+        justify-content: center !important;
+    }
+
+
+    .daily-list .lis {
+        width: calc(100% / 3);
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .daily-list .lis {
+        width: calc(100% / 2);
+    }
+}
