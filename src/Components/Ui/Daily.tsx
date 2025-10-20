@@ -29,7 +29,7 @@ export default function Daily({data ,ind}:{data:string,ind:number}) {
     }
 
     return (
-        <div data-aos="zoom-in" data-aos-delay= "1500" data-aos-duration="500" className="container daily rounded-2 p-2">
+        <div data-aos="zoom-in" data-aos-duration="500" className="container daily rounded-2 p-2">
             <h5 className='text-center fs-6'>{convertDate(data)}</h5>
             <figure className='w-75 m-auto'>
                 <img className='w-100' src={SrcImages[ind]} alt="status" />
