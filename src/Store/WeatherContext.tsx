@@ -92,6 +92,9 @@ export const WeatherProvider = ({ children }: { children: ReactNode }) => {
         }
     };
 
+    useEffect(()=>{
+        getWeather(city);
+    },[units])
 
   // On first load: use current location
     useEffect(() => {
