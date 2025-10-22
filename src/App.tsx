@@ -1,6 +1,6 @@
 import { WeatherProvider} from "./Store/WeatherContext";
 import './App.css'
-import { AllApp } from './Components/Layout/MyApp';
+import MyApp  from './Components/Layout/MyApp';
 export default function App() {
 
 
@@ -9,7 +9,7 @@ export default function App() {
   return (
     <WeatherProvider>
       <section className=" container overflow-hidden">
-        <AllApp />
+        <MyApp />
       </section>
     </WeatherProvider>
   )

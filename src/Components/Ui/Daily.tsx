@@ -7,8 +7,9 @@ import imgSrc04 from '../../assets/icon-fog.webp'
 import imgSrc05 from '../../assets/icon-rain.webp'
 import imgSrc06 from '../../assets/icon-overcast.webp'
 import imgSrc07 from '../../assets/icon-drizzle.webp'
+import React from "react";
 
-export default function Daily({data ,ind}:{data:string,ind:number}) {
+function Daily({data ,ind}:{data:string,ind:number}) {
     
     const {weather} = useStore();
     
@@ -41,3 +42,5 @@ export default function Daily({data ,ind}:{data:string,ind:number}) {
         </div>
     )
 }
+
+export const MemoDaily = React.memo(Daily);

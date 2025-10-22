@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useStore } from "../../Store/useStore";
 import { WeatherServices } from "../../Service/WeatherServices";
+import React from "react";
 
-export default function Header() {
+function Header() {
     const { getWeather } = useStore();
     const [searchTerm, setSearchTerm] = useState("");
     const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -83,3 +84,5 @@ export default function Header() {
         </header>
     );
 }
+
+export const MemoHeader = React.memo(Header);

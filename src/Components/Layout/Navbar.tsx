@@ -26,7 +26,7 @@ export default function Navbar() {
                 <hr />
 
                 <li><h3 className="px-3 py-1 fs-6">Temperature</h3></li>
-                <li className="d-flex list-grp rounded-2 pe-3" onClick={() => setUnits("metric")}>
+                <li className="d-flex list-grp rounded-2 pe-3" onClick={() => {setUnits("metric"); }}>
                     <a className="dropdown-item rounded-2">Celsius (°C)</a>
                     {isChecked("metric") && <img src={checkImg} alt="checked" />}
                 </li>

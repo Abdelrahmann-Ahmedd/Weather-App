@@ -1,8 +1,8 @@
-import { useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import { useStore } from "../../Store/useStore";
-import Hourly from "../Ui/Hourly";
+import { MemoHourly } from "../Ui/Hourly";
 
-export default function HourlyList() {
+function HourlyList() {
     const { weather } = useStore();
     const hourly = weather?.hourly;
 
@@ -65,7 +65,7 @@ export default function HourlyList() {
             <div  className=" row gy-4 mt-3 overflow-y-scroll"style={{ maxHeight: "550px", overflowY: "auto" }} >
                 {filteredHours.length ? (
                 filteredHours.map((item, index) => (
-                    <Hourly
+                    <MemoHourly
                     key={index}
                     hour={`${getHour(item.time)} PM`}
                     temp={item.temp}
@@ -78,3 +78,5 @@ export default function HourlyList() {
         </div>
     );
 }
+
+export const MemoHourlyList = React.memo(HourlyList);
